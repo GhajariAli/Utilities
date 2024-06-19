@@ -1,13 +1,5 @@
 #include "MPU6050_Gyro.h"
 
-
-const char *HALStatusString[] = {
-      "HAL_OK\n",
-      "HAL_ERROR\n",
-      "HAL_BUSY\n",
-      "HAL_TIMEOUT\n"
-};
-
 void MPU6050_INIT(){
 	uint8_t Samplerate = 0x00; //this will be +1 in the MPU6050 (the chip is 8khz divided by this value +1
 	uint8_t	PowerManagementOption= 0x01; // check datasheet this will clear all registers and set internal 8khz osc as clock
